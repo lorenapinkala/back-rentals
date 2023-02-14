@@ -4,7 +4,7 @@ const app = express();
 const morgan = require("morgan");
 const cors = require("cors");
 // conexion a db, cluster
-//const client = require("./config/db");
+const client = require("./db/index");
 const cookieparser = require("cookie-parser");
 //enviroment
 //require("dotenv").config();
