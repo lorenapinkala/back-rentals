@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', false);
-//require("dotenv").config();
+require("dotenv").config();
 
 const client = mongoose
-  .connect('mongodb+srv://topland:mongodb@cluster0.7rvolyd.mongodb.net/test')
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("Succesfully db connected"))
   .catch((err) => console.error(err));
 

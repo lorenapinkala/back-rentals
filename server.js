@@ -7,7 +7,7 @@ const cors = require("cors");
 const client = require("./db/index");
 const cookieparser = require("cookie-parser");
 //enviroment
-//require("dotenv").config();
+require("dotenv").config();
 
 //middelware
 
@@ -18,6 +18,6 @@ app.use(cookieparser());
 app.use(express.urlencoded({ extended: true }));
 //app.use("/api", routes);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("servidor escuchando en el puerto 3000");
 });
